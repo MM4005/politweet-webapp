@@ -1,0 +1,237 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+h1 {
+	font-family: sans-serif;
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin: 0px;
+    color: rgb(0,0,0);
+    border-bottom: 1px #AAAAAA solid;
+    padding: 15px 0px;
+    background: rgb(250,250,250);
+}
+#bg{
+	z-index: -1;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    opacity: 0.2;
+}
+#usa {
+	display: block;
+	margin: auto;
+}
+
+#control{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 15px 0px;
+    color: rgb(50,50,50);
+    background: rgb(250,250,250);
+    font-size: 22px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: sans-serif;
+}
+#slider{
+	width: 300px;
+}
+label, input, output{
+	display: inline-block;
+}
+#count{
+	width: 80px;
+	text-align: left;
+}
+
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: 300px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 4px;
+    background: #AAA;
+    border: none;
+    border-radius: 3px;
+    margin-top: -14px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #FFF;
+    margin-top: -14px;
+    box-shadow: 0px 3px 5px #444;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #AAA;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 4px;
+    background: #AAA;
+    border: none;
+    border-radius: 3px;
+    margin-top: -14px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #FFF;
+	box-shadow: 0px 3px 5px #444;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 4px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #FFF;
+	box-shadow: 0px 3px 5px #444;;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  	#svg2{
+		height: auto;
+	}
+  	#slider{
+		width: 130px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	#svg2{
+		height: 200px;
+	}
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+	#svg2{
+		height: auto;
+	}
+	#slider{
+		width: 180px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+	#svg2{
+		height: 250px;
+	}
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+	#svg2{
+		height: 380px;
+	}
+	#slider{
+		width: 200px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+	#svg2{
+		height: 285px;
+	}
+}
