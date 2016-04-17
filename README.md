@@ -1,2 +1,2 @@
 # politweet-webapp
-PoliTweet webapp, backed by PHP.
+PoliTweets webapp, backed by PHP.
